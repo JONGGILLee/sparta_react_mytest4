@@ -27,7 +27,9 @@ const App = () => {
         {/* cat_name 은 동적으로 바꿀거야 -> 동적 라우팅 */}
         {/* <Cat /> */}
       </Route>
-      <Route path="/Dog" exact component={Dog}></Route>
+      <Route path="/Dog" exact>
+        <Dog />
+      </Route>
       <Nemo />
       <Button list={list} />
       <Circle />
