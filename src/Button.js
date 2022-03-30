@@ -5,12 +5,12 @@ const Button = ({ list }) => {
   const my_lists = list;
   const my_wrap = React.useRef(null);
 
-  console.log(my_wrap); // 콘솔로 확인해봐요!
+  //   console.log(my_wrap); // 콘솔로 확인해봐요!
 
-  window.setTimeout(() => {
-    // 1초 뒤에는?!
-    console.log(my_wrap);
-  }, 1000);
+  //   window.setTimeout(() => {
+  //     // 1초 뒤에는?!
+  //     console.log(my_wrap);
+  //   }, 1000);
   return (
     <>
       <div ref={my_wrap}>

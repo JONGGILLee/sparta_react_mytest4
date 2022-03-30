@@ -8,12 +8,10 @@ const list = ["산책하기", "코딩공부하기", "등산하기"];
 
 const App = () => {
   return (
-    <>
-      <div className="App">
-        <Nemo />
-        <Button list={list} />
-      </div>
-    </>
+    <div className="App">
+      <Nemo />
+      <Button list={list} />
+    </div>
   );
 };
 
