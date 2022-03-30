@@ -1,4 +1,6 @@
 import React from "react";
+import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 const Nemo = (props) => {
   const [count, setCount] = React.useState(2);
@@ -17,6 +19,8 @@ const Nemo = (props) => {
     }
   };
 
+  const history = useHistory();
+
   return (
     <>
       {nemo_count.map((n, i) => {
@@ -30,7 +34,13 @@ const Nemo = (props) => {
               margin: "10px",
             }}
           >
-            nemo
+            <button
+              onClick={() => {
+                history.push("/EditPage");
+              }}
+            >
+              nemo
+            </button>
           </div>
         );
       })}
