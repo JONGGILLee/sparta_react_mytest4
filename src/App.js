@@ -16,7 +16,8 @@ const App = () => {
       <Route path="/" exact>
         <Header />
       </Route>
-      <Route path="/Cat">
+      <Route path="/Cat/:cat_name" exact>
+        {/* cat_name 은 동적으로 바꿀거야 -> 동적 라우팅 */}
         <Cat />
       </Route>
       <Nemo />
