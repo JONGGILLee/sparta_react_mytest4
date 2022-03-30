@@ -1,8 +1,8 @@
 import React from "react";
 
 const Nemo = (props) => {
-  const [count, setCount] = React.useState(3);
-  //   count 를 변경하는 함수가 setCount에 들어간다. 그리고 state 에 들어가는 초기값3을 useState(3)에 넣어준다.
+  const [count, setCount] = React.useState(2);
+  //   count 를 변경하는 함수가 setCount에 들어간다. 그리고 state 에 들어가는 초기값2을 useState(2)에 넣어준다.
   console.log(count);
   const nemo_count = Array.from({ length: count }, (v, i) => i);
 
