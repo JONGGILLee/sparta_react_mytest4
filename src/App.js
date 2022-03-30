@@ -16,9 +16,9 @@ const App = () => {
       <Route path="/" exact>
         <Header />
       </Route>
-      <Route path="/Cat/:cat_name" exact>
+      <Route path="/Cat/:cat_name" exact component={Cat}>
         {/* cat_name 은 동적으로 바꿀거야 -> 동적 라우팅 */}
-        <Cat />
+        {/* <Cat /> */}
       </Route>
       <Nemo />
       <Button list={list} />
