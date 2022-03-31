@@ -26,6 +26,9 @@ const Nemo = (props) => {
       {nemo_count.map((n, i) => {
         return (
           <div
+            onClick={() => {
+              history.push("/EditPage");
+            }}
             key={i}
             style={{
               width: "200px",
@@ -34,17 +37,24 @@ const Nemo = (props) => {
               margin: "10px",
             }}
           >
-            <button
-              onClick={() => {
-                history.push("/EditPage");
-              }}
-            >
-              nemo
-            </button>
+            nemo
           </div>
         );
       })}
-
+      <div
+        onClick={() => {
+          history.push("/EditPage");
+        }}
+        style={{
+          width: "20px",
+          heigh: "20px",
+          backgroundColor: "orange",
+          borderRadius: "30px",
+        }}
+      >
+        <hr />
+        버튼
+      </div>
       <div>
         <button onClick={addNemo}> 추가버튼</button>
         <button onClick={deleteNemo}> 삭제버튼</button>
