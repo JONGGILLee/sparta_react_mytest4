@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Header = (props) => {
   return (
-    <MyStyled>
+    <MyStyled bg_color={true}>
       <h1 className="head">
         개인사전 만들기 테스트
         <hr className="line" />
@@ -14,10 +14,13 @@ const Header = (props) => {
 
 const MyStyled = styled.div`
   align: center;
-  background: #e1960b;
+  background-color: ${(props) => (props.bg_color ? "#e9af45" : "purple")};
   padding: 15px;
   margin: 10px;
   text-align: center;
 `;
+// 백틱 `` 안에서 ${ ()=> () 이용하여 삼항연산자 사용}
+// ()=>{ return abc; }
+// ()=>(abc)
 
 export default Header;
