@@ -26,7 +26,8 @@ const Button = ({ list }) => {
           onChange={() => {
             console.log(my_wrap.current.value);
           }}
-        />
+        ></input>
+        <button>bbb</button>
       </div>
     </>
   );

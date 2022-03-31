@@ -1,5 +1,5 @@
-import "./App.css";
 import React from "react";
+import "./style.css";
 import { Route, Link, Switch } from "react-router-dom";
 import styled from "styled-components";
 
@@ -16,19 +16,21 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Switch>
-        <Route path="/" exact>
-          <Nemo />
-        </Route>
-        <Route path="/EditPage" exact>
-          <EditPage />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-      <Button list={list} />
-      <Circle />
+      <div className="container">
+        <Switch>
+          <Route path="/" exact>
+            <Nemo />
+          </Route>
+          <Route path="/EditPage" exact>
+            <EditPage />
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </Switch>
+        <Button list={list} />
+        <Circle />
+      </div>
     </div>
   );
 };
