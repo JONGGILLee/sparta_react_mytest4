@@ -1,21 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Button = ({ list }) => {
-  const my_lists = list;
+const Button = (props) => {
   const my_wrap = React.useRef(null);
+  console.log(my_wrap); // 콘솔로 확인해봐요!
 
-  //   console.log(my_wrap); // 콘솔로 확인해봐요!
+  const [list, setList] = React.useState(["장보기", "고양이랑 놀기"]);
 
+  const addList = () => {
+    console.log(my_wrap.current.value);
+    setList([...list, my_wrap.current.value]);
+  };
   //   window.setTimeout(() => {
   //     // 1초 뒤에는?!
   //     console.log(my_wrap);
   //   }, 1000);
+  console.log(list);
   return (
     <>
       <div ref={my_wrap}>
-        {my_lists.map((list, index) => {
-          return <ItemStyle key={index}>{list}</ItemStyle>;
+        {list.map((l, index) => {
+          return <ItemStyle key={index}>{l}</ItemStyle>;
         })}
       </div>
 
@@ -27,7 +32,7 @@ const Button = ({ list }) => {
             console.log(my_wrap.current.value);
           }}
         ></input>
-        <button>bbb</button>
+        <button onClick={addList}>추가하기</button>
       </div>
     </>
   );

@@ -10,8 +10,6 @@ import Header from "./Header";
 import EditPage from "./EditPage";
 import NotFound from "./NotFound";
 
-const list = ["산책하기", "코딩공부하기", "등산하기"];
-
 const App = () => {
   return (
     <div className="App">
@@ -28,7 +26,7 @@ const App = () => {
             <NotFound />
           </Route>
         </Switch>
-        <Button list={list} />
+        <Button />
         <Circle />
       </div>
     </div>
