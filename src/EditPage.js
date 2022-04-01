@@ -1,7 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { deleteDict } from "./redux/modules/dict";
+import { useSelector, useDispatch } from "react-redux";
 
 const EditPage = (props) => {
   const history = useHistory();
@@ -12,6 +13,8 @@ const EditPage = (props) => {
 
   const dict_list = useSelector((state) => state.dict.list);
   console.log(dict_list[params.idx]);
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -32,6 +35,14 @@ const EditPage = (props) => {
           }}
         >
           단어장으로 돌아가기
+        </button>
+        <button
+          onClick={() => {
+            dispatch(deleteDict(params.idx));
+            history.goBack();
+          }}
+        >
+          이 리스트 삭제하기~!
         </button>
       </div>
     </>
