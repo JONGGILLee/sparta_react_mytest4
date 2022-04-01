@@ -5,7 +5,6 @@ import styled from "styled-components";
 
 import Nemo from "./Nemo";
 import Button from "./Button";
-import Circle from "./Circle";
 import Header from "./Header";
 import EditPage from "./EditPage";
 import NotFound from "./NotFound";
@@ -27,7 +26,6 @@ const App = () => {
           </Route>
         </Switch>
         <Button />
-        <Circle />
       </div>
     </div>
   );
