@@ -24,13 +24,13 @@ const Nemo = (props) => {
 
   return (
     <>
-      {nemo_count.map((n, i) => {
+      {nemo_count.map((n, index) => {
         return (
           <div
+            key={index}
             onClick={() => {
-              history.push("/EditPage");
+              history.push("/EditPage/" + index);
             }}
-            key={i}
             // Key 모든 React 요소들이 자동으로 랜덤 생성되는 값. 여기에 인덱스 i 값을 넣어 줄 수 있다.
             style={{
               width: "200px",

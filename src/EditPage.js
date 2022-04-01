@@ -1,9 +1,17 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const EditPage = (props) => {
   const history = useHistory();
   const my_wrap = React.useRef(null);
+
+  const params = useParams();
+  console.log(params);
+
+  const dict_list = useSelector((state) => state.dict.list);
+  console.log(dict_list[params.idx]);
 
   return (
     <>
@@ -17,7 +25,7 @@ const EditPage = (props) => {
         />
       </div>
       <div>
-        <h1>단어장을 작성해주세요</h1>
+        <h1>{dict_list[params.idx]}</h1>
         <button
           onClick={() => {
             history.push("/");

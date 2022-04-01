@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/" exact>
             <Nemo />
           </Route>
-          <Route path="/EditPage" exact>
+          <Route path="/EditPage/:idx" exact>
             <EditPage />
           </Route>
           <Route>
