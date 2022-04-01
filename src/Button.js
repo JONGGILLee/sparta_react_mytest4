@@ -5,7 +5,7 @@ const Button = (props) => {
   const my_wrap = React.useRef(null);
   console.log(my_wrap); // 콘솔로 확인해봐요!
 
-  const [list, setList] = React.useState([]);
+  const [list, setList] = React.useState(["영화관 가기", "매일 책읽기"]);
 
   const addList = () => {
     console.log(my_wrap.current.value);
