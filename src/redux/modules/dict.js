@@ -5,7 +5,7 @@ const CREATE = "dict/CREATE";
 
 // 초기값 (선택)
 const initialState = {
-  list: ["영화관 가기", "매일 책읽기"],
+  list: ["영화관 가서 문화생활", "매일 책읽어야해"],
 };
 
 // Action Creators
